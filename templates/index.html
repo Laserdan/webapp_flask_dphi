@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deploy ML model using flask</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Webapp for loan adjudication</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="gender" placeholder="Gender (Male/Female)" required="required" />
+      <input type="text" name="married" placeholder="Married (Yes/No)" required="required" />
+      <input type="text" name="dependents" placeholder="Dependents (0/1/2/3+)" required="required" />
+      <input type="text" name="education" placeholder="Education (Graduate/Not Graduate)" required="required" />
+        <br><br>
+      <input type="text" name="selfemployed" placeholder="Self Employed (Yes/No)" required="required" />
+      <input type="text" name="credithistory" placeholder="Credit History (Yes/No)" required="required" />
+      <input type="text" name="propertyarea" placeholder="Area (Urban/Semiurban/Rural)" required="required" />
+      <input type="number" name="applicantincome" placeholder="Aplicant Income" required="required" />        
+        <br><br>
+      <input type="number" name="coapplicantincome" placeholder="Coaplicant Income" required="required" />
+      <input type="number" name="loanammount" placeholder="Loan Ammount" required="required" />
+      <input type="number" name="loanammountterm" placeholder="Loan Ammount Term" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        <br><br>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
